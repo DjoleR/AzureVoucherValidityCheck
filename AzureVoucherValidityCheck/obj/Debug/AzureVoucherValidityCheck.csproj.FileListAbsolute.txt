@@ -1,0 +1,16 @@
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\AzureVoucherValidityCheck.exe.config
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\AzureVoucherValidityCheck.exe
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\AzureVoucherValidityCheck.pdb
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\WebDriver.dll
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\WebDriver.xml
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csprojResolveAssemblyReference.cache
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\MainWindow.g.cs
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\App.g.cs
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck_MarkupCompile.cache
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck_MarkupCompile.lref
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\MainWindow.baml
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.g.resources
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.Properties.Resources.resources
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.GenerateResource.Cache
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.exe
+c:\users\djord\documents\visual studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.pdb
