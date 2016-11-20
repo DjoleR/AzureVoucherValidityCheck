@@ -9,7 +9,7 @@
     <StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Voucher"/>
-            <TextBox x:Name="voucherTextBox" />
+            <TextBox x:Name="voucherTextBox" Width="200"/>
         </StackPanel>
         <Button x:Name="checkButton" Content="Check" Click="CheckButton_Click"/>
         <TextBlock x:Name="statusTextBlock" TextWrapping="Wrap" />

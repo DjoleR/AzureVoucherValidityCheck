@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 //using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Remote;
+using System.Windows.Media;
 
 namespace AzureVoucherValidityCheck
 {
@@ -39,6 +40,7 @@ namespace AzureVoucherValidityCheck
         {
             driver.Url = @"http://www.microsoftazurepass.com/";
             statusTextBlock.Text = "";
+            statusTextBlock.Background = new SolidColorBrush(Colors.Transparent);
             var country = driver.FindElementById("ddlCountry");
             country.SendKeys("Switzerland");
             var voucher = driver.FindElementById("tbPromo");
@@ -48,9 +50,15 @@ namespace AzureVoucherValidityCheck
 
             bool error = CheckError(driver);
             if (error)
+            {
                 statusTextBlock.Text = "Voucher used!";
+                statusTextBlock.Background = new SolidColorBrush(Colors.Red);
+            }
             else
+            {
                 statusTextBlock.Text = "Voucher not used!";
+                statusTextBlock.Background = new SolidColorBrush(Colors.LightGreen);
+            }
         }
 
         private bool CheckError(RemoteWebDriver driver)
