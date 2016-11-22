@@ -32,3 +32,4 @@ C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.GenerateResource.Cache
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\chromedriver.exe
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck_Content.g.cs
+C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.ResolveComReference.cache
