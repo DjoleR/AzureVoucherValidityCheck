@@ -37,3 +37,4 @@ C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\A
 C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.ResolveComReference.cache
 C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.exe
 C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.pdb
+C:\Users\djord\Documents\Visual Studio 2017\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.ResolveComReference.cache
