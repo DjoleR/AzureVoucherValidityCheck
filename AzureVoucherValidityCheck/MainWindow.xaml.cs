@@ -19,7 +19,7 @@ namespace AzureVoucherValidityCheck
             LoadKeys();
             try
             {
-                driver = new ChromeDriver(@"C:\Users\djord\Downloads\chromedriver_win32"); // Change this to the location where chrome driver is installed (extracted)                
+                driver = new ChromeDriver(@"."); // Change this to the location where chrome driver is installed (extracted)                
                 //driver = new EdgeDriver(@"C:\Users\djord\Downloads\edgedriver"); // Change this to the location where edge driver is installed (extracted)                
             }
             catch (DriverServiceNotFoundException)
