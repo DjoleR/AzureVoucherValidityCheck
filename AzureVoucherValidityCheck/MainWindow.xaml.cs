@@ -72,14 +72,10 @@ namespace AzureVoucherValidityCheck
                 bool error = CheckError(driver);
                 if (error)
                 {
-                    statusTextBlock.Text = "Voucher used!";
-                    statusTextBlock.Background = new SolidColorBrush(Colors.Red);
                     xlRange.Cells[i, 2] = "Used";
                 }
                 else
                 {
-                    statusTextBlock.Text = "Voucher not used!";
-                    statusTextBlock.Background = new SolidColorBrush(Colors.LightGreen);
                     xlRange.Cells[i, 2] = "Valid";
                 }
         
@@ -88,6 +84,7 @@ namespace AzureVoucherValidityCheck
 
             }
 
+            statusTextBlock.Text = "Voucher check done!";
             //cleanup
             GC.Collect();
             GC.WaitForPendingFinalizers();
