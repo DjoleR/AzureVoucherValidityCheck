@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/AzureVoucherValidityCheck/v14
+
+AzureVoucherValidityCheck/obj/*
+AzureVoucherValidityCheck/bin/*
