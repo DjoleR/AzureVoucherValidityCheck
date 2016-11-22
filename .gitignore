@@ -4,5 +4,5 @@
 
 /.vs/AzureVoucherValidityCheck/v14
 
-AzureVoucherValidityCheck/obj/*
-AzureVoucherValidityCheck/bin/*
+AzureVoucherValidityCheck/obj/
+AzureVoucherValidityCheck/bin/
