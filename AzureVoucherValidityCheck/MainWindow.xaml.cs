@@ -3,6 +3,10 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 //using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Remote;
+using System;
+using Excel = Microsoft.Office.Interop.Excel;
+
+using System.Runtime.InteropServices;
 using System.Windows.Media;
 
 namespace AzureVoucherValidityCheck
@@ -19,8 +23,7 @@ namespace AzureVoucherValidityCheck
             LoadKeys();
             try
             {
-                driver = new ChromeDriver(@"C:\Users\djord\Downloads\chromedriver_win32"); // Change this to the location where chrome driver is installed (extracted)                
-                //driver = new EdgeDriver(@"C:\Users\djord\Downloads\edgedriver"); // Change this to the location where edge driver is installed (extracted)                
+                driver = new ChromeDriver(@".");                
             }
             catch (DriverServiceNotFoundException)
             {
@@ -33,32 +36,81 @@ namespace AzureVoucherValidityCheck
 
         private void LoadKeys()
         {
-            voucherTextBox.Text = "";
+           // voucherTextBox.Text = "";
         }
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
-            driver.Url = @"http://www.microsoftazurepass.com/";
-            statusTextBlock.Text = "";
-            statusTextBlock.Background = new SolidColorBrush(Colors.Transparent);
-            var country = driver.FindElementById("ddlCountry");
-            country.SendKeys("Switzerland");
-            var voucher = driver.FindElementById("tbPromo");
-            voucher.SendKeys(voucherTextBox.Text);
-            var submit = driver.FindElementByClassName("btn");
-            submit.Submit();
 
-            bool error = CheckError(driver);
-            if (error)
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(filePathTextBox.Text);
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+          
+          
+
+            //iterate over the rows and columns and print to the console as it appears in the file
+            //excel is not zero based!!
+            for (int i = 1; i < xlRange.Rows.Count; i++)
             {
-                statusTextBlock.Text = "Voucher used!";
-                statusTextBlock.Background = new SolidColorBrush(Colors.Red);
+
+                driver.Url = @"http://www.microsoftazurepass.com/";
+                Console.Write(xlRange.Cells[i, 1].Value2.ToString() + "\r\n");
+
+                statusTextBlock.Text = "";
+                //statusTextBlock.Background = new SolidColorBrush(Colors.Transparent);
+               
+                var country = driver.FindElementById("ddlCountry");
+              
+                country.SendKeys("Switzerland");
+                var voucher = driver.FindElementById("tbPromo");
+                voucher.SendKeys(xlRange.Cells[i, 1].Value2.ToString());
+                var submit = driver.FindElementByClassName("btn");
+                submit.Submit();
+
+                bool error = CheckError(driver);
+                if (error)
+                {
+                    statusTextBlock.Text = "Voucher used!";
+                    statusTextBlock.Background = new SolidColorBrush(Colors.Red);
+                    xlRange.Cells[i, 2] = "Used";
+                }
+                else
+                {
+                    statusTextBlock.Text = "Voucher not used!";
+                    statusTextBlock.Background = new SolidColorBrush(Colors.LightGreen);
+                    xlRange.Cells[i, 2] = "Valid";
+                }
+        
+        
+                //add useful things here!   
+
             }
-            else
-            {
-                statusTextBlock.Text = "Voucher not used!";
-                statusTextBlock.Background = new SolidColorBrush(Colors.LightGreen);
-            }
+
+            //cleanup
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            //rule of thumb for releasing com objects:
+            //  never use two dots, all COM objects must be referenced and released individually
+            //  ex: [somthing].[something].[something] is bad
+
+            //release com objects to fully kill excel process from running in the background
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+
+            /*
+           
+            */
         }
 
         private bool CheckError(RemoteWebDriver driver)
@@ -72,6 +124,25 @@ namespace AzureVoucherValidityCheck
             catch (NotFoundException)
             {
                 return false;
+            }
+        }
+
+        private void openVoucherFile_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+
+            // Set filter for file extension and default file extension 
+            dlg.DefaultExt = ".xlsx";
+            dlg.Filter = "Excel Files(*.xlsx)|*.xlsx|Excel Files(*.xls)|*.xls";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                filePathTextBox.Text = filename;
             }
         }
     }
