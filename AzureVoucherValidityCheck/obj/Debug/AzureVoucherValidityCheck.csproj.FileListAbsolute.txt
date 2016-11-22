@@ -33,3 +33,7 @@ C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\chromedriver.exe
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck_Content.g.cs
 C:\Users\chmikhai\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.ResolveComReference.cache
+C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\bin\Debug\AzureVoucherValidityCheck.exe.config
+C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.csproj.ResolveComReference.cache
+C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.exe
+C:\Users\djord\Documents\Visual Studio 2015\Projects\AzureVoucherValidityCheck\AzureVoucherValidityCheck\obj\Debug\AzureVoucherValidityCheck.pdb
