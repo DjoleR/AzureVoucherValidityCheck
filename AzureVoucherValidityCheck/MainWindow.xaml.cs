@@ -52,7 +52,7 @@ namespace AzureVoucherValidityCheck
 
             //iterate over the rows and columns and print to the console as it appears in the file
             //excel is not zero based!!
-            for (int i = 1; i < xlRange.Rows.Count; i++)
+            for (int i = 1; i <= xlRange.Rows.Count; i++)
             {
 
                 driver.Url = @"http://www.microsoftazurepass.com/";
